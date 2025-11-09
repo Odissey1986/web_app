@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё первое веб приложение</title>
+</head>
+<body style="background-color: blueviolet;">
+    <h1>Привет, {{ name }}!</h1>
+    <p>Ваш рост: {{ height }}см</p>
+    <h3>Хобби</h3>
+    <ul>
+        {% for hobby in hobbies %}
+            <li>{{ hobby }}</li>
+            <!-- <p>Проверка цикла</p> -->
+        {% endfor %}
+    </ul>
+    <p>Наша первая страница из шаблона</p>
+</body>
+</html>

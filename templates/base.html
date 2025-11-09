@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+    </style>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #e6dada;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #415b91
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a:hover{
+            text-decoration: underline;
+            color: black;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+
+        main{
+            padding-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index')}}">Главная</a>
+        <a href="{{ url_for('about')}}">О нас</a>
+        <a href="{{ url_for('contacts')}}">Контакты</a>
+    </nav>
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+</body>
+</html>

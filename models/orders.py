@@ -12,5 +12,5 @@ class Order(Base):
     product_id = Column(Integer, ForeignKey("products.id"), nullable=False)
     count = Column(Integer, default=1)
 
-    product = relationship("Product", back_populates="order")
+    product = relationship("Product", back_populates="order", lazy="joined")
     

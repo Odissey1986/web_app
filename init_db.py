@@ -32,10 +32,16 @@ def init_database():
         Order(customer_name="Костя", 
               phone_number="89998001918", 
               product_id=3, 
-              count=6)
+              count=6),
+
+        Order(customer_name="Павел", 
+              phone_number="89993782388", 
+              product_id=4, 
+              count=2)
     ]
 
     session.add_all(lst)
+    session.add_all(lst2)
     session.commit()
 
     session.close()

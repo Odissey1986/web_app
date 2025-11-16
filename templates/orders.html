@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1> Список заказов </h1>
-    <table>
+    <table border="1" cellpadding=20>
         <tr>
             <th> Номера заказа </th>
             <th> Имя заказчика </th>
@@ -10,5 +10,16 @@
             <th> Наиминование товара </th>
             <th> Количество </th>
         </tr>
+
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.id }}</td>
+            <td>{{ order.customer_name }}</td>
+            <td>{{ order.phone_number }}</td>
+            <td>{{ order.product.name}}</td>
+            <td>{{ order.count }}</td>
+        </tr>
+        {% endfor %}
+
     </table>
 {% endblock %}
